@@ -1,0 +1,78 @@
+div {
+  margin: auto;
+  font-size: large;
+  text-align: center;
+  padding: 9px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+body {
+  background-color: rgb(241, 240, 240);
+}
+
+.main_box {
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  margin-top: 10%;
+  width: 250px;
+  padding: 53px 37px 53px 37px;
+  border: 1px solid rgba(199, 199, 199, 0.712);
+}
+
+.main_box img {
+  width: 80%;
+}
+#name,
+#password,
+#new_email,
+#new_id,
+#new_password,
+#new_user_name,
+#new_email,
+#new_confirmPassword {
+  ime-mode: inactive; /*글 입력시 기본 영문 모드*/
+  font-size: 15px;
+  height: 30px;
+  width: 230px;
+  color: black;
+}
+
+.signup_btn,
+.login_btn {
+  width: 260px;
+  height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgb(71, 182, 255);
+  border-radius: 15px;
+  border: rgb(145, 145, 145);
+  padding-right: 20px;
+  font-size: 18px;
+  color: aliceblue;
+}
+
+.signup_btn:hover,
+.login_btn:hover {
+  background-color: rgb(71, 136, 255);
+}
+
+.sub_box {
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 250px;
+  height: 25px;
+  padding: 20px 37px;
+  border: 1px solid rgba(199, 199, 199, 0.712);
+}
+
+.downbtn img {
+  width: 160px;
+}
+.googleplay_download {
+  height: 55px;
+}

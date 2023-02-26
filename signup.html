@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>가입하기</title>
+  </head>
+  <body>
+    <div class="main_box">
+      <img
+        src="images/Instagram_logo.png"
+        alt="인스타그램로고"
+        class="instar_logo"
+      />
+      <div>
+        <input
+          type="text"
+          id="new_email"
+          placeholder="이메일 주소"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='ID 혹은 이메일'"
+          size="30"
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          id="new_user_name"
+          placeholder="성명"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='성명'"
+          size="30"
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          id="new_id"
+          placeholder="사용자 이름(ID)"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='비밀번호 확인'"
+          size="30"
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="new_password"
+          placeholder="비밀번호"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='비밀번호'"
+          size="30"
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="new_confirmPassword"
+          placeholder="비밀번호 확인"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='비밀번호 확인'"
+          size="30"
+        />
+      </div>
+      <input
+        id="signup_btn"
+        class="signup_btn"
+        type="submit"
+        value="가입하기"
+      />
+    </div>
+    <div class="sub_box">
+      <span>계정이 있으신가요?</span>
+      <a href="login.html"
+        ><span style="color: rgb(66, 126, 255)">로그인</span></a
+      >
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="signup.js"></script>
+  </body>
+</html>

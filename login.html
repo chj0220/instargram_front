@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Instagram-web-dev</title>
+  </head>
+  <body>
+    <div id="login_box" class="main_box">
+      <img
+        src="images/Instagram_logo.png"
+        alt="인스타그램로고"
+        class="instar_logo"
+      />
+      <div>
+        <input
+          type="text"
+          id="name"
+          placeholder="사용자 이름 또는 이메일"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='ID'"
+          size="30"
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="password"
+          placeholder="비밀번호"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='비밀번호'"
+          size="30"
+        />
+      </div>
+      <button id="login_btn" class="login_btn" type="button">로그인</button>
+    </div>
+    <div class="sub_box">
+      <span>계정이 없으신가요?</span>
+      <a href="signup.html"
+        ><span style="color: rgb(66, 126, 255)">가입하기</span></a
+      >
+    </div>
+    <div>앱을 다운로드하세요.</div>
+    <div class="downbtn">
+      <a
+        href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DFA8DA9D0-7B22-472F-A606-7C963531008D%26utm_content%3Dlo%26utm_medium%3Dbadge"
+        target="_blank"
+        ><img
+          src="images/google_download.png"
+          alt="GooglePlay"
+          class="googleplay_download"
+      /></a>
+      <a
+        href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT?hl=ko-kr&gl=kr"
+        target="_blank"
+        ><img
+          src="images/microsoft_download.png"
+          alt="Microsoft"
+          class="microsoft_download"
+      /></a>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
