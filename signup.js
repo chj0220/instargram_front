@@ -19,7 +19,23 @@ function SignupHandleBtn() {
   console.log(typeof user_info);
   console.log(user_info);*/
 
-  $.ajax({
+  fetch("http://52.78.86.193:8080/accounts/emailsignup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+    body: JSON.stringify({
+      userId: user_id.value,
+      name: user_name.value,
+      email: user_email.value,
+      password: user_password.value,
+      confirmPassword: user_confirmPassword.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+
+  /*$.ajax({
     method: "POST",
     url: "http://52.78.86.193:8080/accounts/emailsignup",
     data: {
@@ -32,7 +48,7 @@ function SignupHandleBtn() {
     dataType: "json"  
   }).done(function (msg) {
     alert("Data Saved: " + msg);
-  });
+  });*/
 }
 
 signupbtn.addEventListener("click", SignupHandleBtn);
