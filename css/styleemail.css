@@ -1,0 +1,16 @@
+#next_btn {
+  margin-bottom: 20px;
+}
+.main_box {
+  width: 300px;
+}
+.sub_box {
+  width: 300px;
+}
+#email {
+  ime-mode: inactive; /*글 입력시 기본 영문 모드*/
+  font-size: 15px;
+  height: 30px;
+  width: 250px;
+  color: black;
+}

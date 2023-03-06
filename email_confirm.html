@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleemail.css" />
+    <title>이메일 확인</title>
+  </head>
+  <body>
+    <div class="main_box">
+      <img
+        src="images/email_icon2.PNG"
+        alt="이메일인증로고"
+        class="email_logo"
+      />
+      <div><strong>인증 코드 입력</strong></div>
+      <div id="txet1">주소로 전송된 인증 코드를 입력하세요.</div>
+      <div>
+        <input
+          type="text"
+          id="email"
+          placeholder="인증 코드"
+          onfocus="this.placeholder=placeholder=''"
+          onblur="this.placeholder='인증 코드'"
+          size="30"
+        />
+      </div>
+      <input id="next_btn" class="next_btn" type="submit" value="다음" />
+      <a href="login.html"
+        ><div id="back" style="color: rgb(66, 126, 255)"
+          ><strong>돌아가기</strong></div
+        ></a
+      >
+    </div>
+
+    <div class="sub_box">
+      <span>계정이 있으신가요?</span>
+      <a href="login.html"
+        ><span style="color: rgb(66, 126, 255)">로그인</span></a
+      >
+    </div>
+    <div>앱을 다운로드하세요.</div>
+    <div class="downbtn">
+      <a
+        href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DFA8DA9D0-7B22-472F-A606-7C963531008D%26utm_content%3Dlo%26utm_medium%3Dbadge"
+        target="_blank"
+        ><img
+          src="images/google_download.png"
+          alt="GooglePlay"
+          class="googleplay_download"
+      /></a>
+      <a
+        href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT?hl=ko-kr&gl=kr"
+        target="_blank"
+        ><img
+          src="images/microsoft_download.png"
+          alt="Microsoft"
+          class="microsoft_download"
+      /></a>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="email_confirm.js"></script>
+  </body>
+</html>
