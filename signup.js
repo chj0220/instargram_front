@@ -1,5 +1,4 @@
 const signupbtn = document.querySelector("#signup_btn");
-
 const user_email = document.querySelector("#new_email");
 const user_name = document.querySelector("#new_user_name");
 const user_id = document.querySelector("#new_id");
@@ -36,6 +35,8 @@ function SignupHandleBtn() {
       location.href="email_confirm.html";
     },
   });
+  
+
 }
 
 signupbtn.addEventListener("click", SignupHandleBtn);
