@@ -6,6 +6,28 @@
 .profile_wrap {
   width: 40%;
 }
+
+.profile_wrap .user_nick_name{
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 50px;
+  margin-left: 50px;
+  font-size: larger;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+@media screen and (max-width: 1500px) {
+  .profile_wrap .user_nick_name{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 1px;
+    margin-left: 1px;
+    font-size: larger;
+    font-weight: bold;
+    color: #4d4d4d;
+  }
+}
 .profile_img {
   width: 152px;
   height: 152px;
@@ -34,16 +56,17 @@
   font-size: 35px;
   font-weight: 200;
   display: inline-block;
-  padding-right: 25px;
+  padding-right: 15px;
   margin-top: 10px;
+  margin-left: 20px;
 }
 
-.detail .top > a {
+.detail .top .profile_edit {
   height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
+  width: 130px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   color: #262626;
@@ -52,17 +75,36 @@
   vertical-align: text-bottom;
   text-decoration: none;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 
-.detail .middle {
+.detail .top .logout{
+  display : flex;
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  margin-top: 20px;
+}
+
+.detail .middle_introduction{
   display: flex;
-  height: 50px;
+  padding: 25px 0;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+
+.detail .bottom {
+  display: flex;
+  height: 40px;
   padding: 18px 0;
   font-size: 15px;
   font-weight: 600;
+  margin-left: 30px;
 }
 
-.detail .middle > li {
+.detail .bottom > li {
+  margin-top: 3px;
   margin-right: 35px;
 }
 .detail .about > span {
@@ -72,7 +114,7 @@
 }
 
 .detail .about > span:nth-child(1) {
-  margin-right: 50px;
+  margin-right: 10px;
 }
 
 .detail .about > span:after {
@@ -88,6 +130,9 @@
 
 .detail .about > span.on:after {
   width: 100%;
+}
+.contents_container_box{
+  margin-top: 200px;
 }
 
 .contents_container {
@@ -122,3 +167,32 @@
     margin: 10px;
   }
 }
+
+.contents_wrap :nth-child(2){
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold ;
+}
+.contents_wrap :nth-child(3){
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  
+}
+
+.contents_wrap :first-child{
+  width:100px;
+  height:100px;
+  display : block;
+  margin : auto;
+}
+
+.line{
+  border:0;
+  height:1px;
+  background:#bbb;
+  width: 99%;
+  margin-bottom: 10px;
+}
+

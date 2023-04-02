@@ -4,7 +4,7 @@ const c = document.getElementById("c");
 const d = document.getElementById("d");
 const e = document.getElementById("e");
 
-a.innerHTML = a.innerText(localStorage.getItem('accessToken'));
+a.innerText = localStorage.getItem()
 
 
 localStorage.clear();

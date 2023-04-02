@@ -10,7 +10,7 @@ a {
 }
 
 body {
-  background-color: rgb(241, 240, 240);
+  background:#fafafa;
 }
 
 .main_box {
@@ -77,4 +77,5 @@ body {
 .googleplay_download {
   height: 55px;
 }
+
 

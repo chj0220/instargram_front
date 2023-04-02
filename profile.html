@@ -7,7 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
 
-    <title>profile</title>
+    <title>프로필</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/style2.css" />
@@ -19,10 +19,8 @@
 
 
     <section id="container">
-    
         <header id="header">
             <section class="h_inner">
-    
                 <h1 class="logo">
                     <a href="home.html">
                         <div class="sprite_insta_icon"></div>
@@ -32,14 +30,14 @@
                     </a>
                 </h1>
     
-                <div class="search_field">
-                    <input type="text" placeholder="�˻�" tabindex="0">
-    
+                <div class="search_box">
+                    <input type="text" placeholder="search" id="search-field" />
+        
                     <div class="fake_field">
-                        <span class=sprite_small_search_icon></span>
-                        <span>�˻�</span>
+                      <span class="sprite_small_search_icon"></span>
+                      <span>검색</span>
                     </div>
-                </div>
+                  </div>
     
     
                 <div class="right_icons">
@@ -53,73 +51,91 @@
     
     
         <div id="main_container">
-    
             <section class="b_inner">
-    
                 <div class="hori_cont">
                     <div class="profile_wrap">
                         <div class="profile_img">
-                            <img src="imgs/thumb.jpeg" alt="����ȣ����">
+                            <img src="imgs/nomal_profile.jpg" alt="profile_img">
+                        </div>
+                        <div class="user_nick_name">
+                            user_name1
                         </div>
                     </div>
     
                     <div class="detail">
                         <div class="top">
-                            <div class="user_name">KindTiger</div>
-                            <a href="profile_edit.html" class="profile_edit">profile_edit</a>
-                            <a href="#" class="logout">logout</a>
+                            <div class="user_name">user_name</div>
+                            <a href="profile_edit.html" class="profile_edit">프로필편집</a>
+                            <a href="login.html" class="logout"><img src="imgs/logout.png" alt="logout"></a>
+                        </div>
+
+                        <div class="middle_introduction">
+                            "한줄소개를 입력해주세요."
                         </div>
     
-                        <ul class="middle">
+                        <ul class="bottom">
                             <li>
-                                <span>post</span>
-                                3
+                                <span>게시물</span>
+                                0
                             </li>
                             <li>
-                                <span>follower</span>
-                                3
+                                <span>팔로워</span>
+                                0
                             </li>
                             <li>
-                                <span>follow</span>
-                                3
+                                <span>팔로우</span>
+                                0
                             </li>
                         </ul>
-                        <p class="about">
-                            <span class="nick_name">kindtigerrr</span>
-                            <span class="book_mark">bookmark</span>
-                        </p>
     
                     </div>
                 </div>
+                
+
+                <hr class="line"> </hr>
+
+                <div class= "contents_container_box">
+                    <div class="contents_wrap">
+                        <div class="camera_logo">
+                            <img src="imgs/cammra_logo.png" alt="cammra_logo">
+                        </div>
+                        <div> 게시물 없음 </div>
+                        <div>사진을 공유하면 회원님의 프로필에 표시됩니다.</div>
+                    </div>
+                </div>
+
+
     
+                <!--
                 <div class="mylist_contents contents_container active">
                     <div class="pic">
-                        <a href="#"><img src="imgs/img_section/img01.jpg" alt=""></a>
+                        <a href="#"><img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"><img src="imgs/img_section/img02.jpg" alt=""></a>
+                        <a href="#"><img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"> <img src="imgs/img_section/img03.jpg" alt=""></a>
+                        <a href="#"> <img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"> <img src="imgs/img_section/img02.jpg" alt=""></a>
+                        <a href="#"> <img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"> <img src="imgs/img_section/img03.jpg" alt=""></a>
+                        <a href="#"> <img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"> <img src="imgs/img_section/img01.jpg" alt=""></a>
+                        <a href="#"> <img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"> <img src="imgs/img_section/img02.jpg" alt=""></a>
+                        <a href="#"> <img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"> <img src="imgs/img_section/img03.jpg" alt=""></a>
+                        <a href="#"> <img src="" alt=""></a>
                     </div>
                     <div class="pic">
-                        <a href="#"> <img src="imgs/img_section/img01.jpg" alt=""></a>
+                        <a href="#"> <img src="" alt=""></a>
                     </div>
+                    -->
                 </div>
     
     
@@ -164,7 +180,8 @@
     
     
     <!--<script src="js/insta.js"></script>-->
-    <script src="js/profile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="profile.js"></script>
     <script>
     
     

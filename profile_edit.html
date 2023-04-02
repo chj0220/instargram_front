@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/profile_edit.css" />
+    <link rel="shortcut icon" href="images/instagram.png" />
+    <title>프로필 편집</title>
+  </head>
+  <body>
+    <section id="container">
+      <header id="header">
+        <section class="h_inner">
+          <h1 class="logo">
+            <a href="home.html">
+              <div class="sprite_insta_icon"></div>
+              <div>
+                <div class="sprite_write_logo"></div>
+              </div>
+            </a>
+          </h1>
+
+          <div class="search_box">
+            <input type="text" placeholder="search" id="search-field" />
+
+            <div class="fake_field">
+              <span class="sprite_small_search_icon"></span>
+              <span>검색</span>
+            </div>
+          </div>
+
+          <div class="right_icons">
+            <a href="new_post.html"><div class="sprite_camera_icon"></div></a>
+            <a href="login.html"><div class="sprite_compass_icon"></div></a>
+            <a href="follow.html"
+              ><div class="sprite_heart_icon_outline"></div
+            ></a>
+            <a href="profile.html"
+              ><div class="sprite_user_icon_outline"></div
+            ></a>
+          </div>
+        </section>
+      </header>
+      <section id="main_container">
+        <section class="b_inner">
+          <div class="inner_main_box">
+            <div class="inner_top">
+              <div class="image_size">
+                <img
+                  class="img_profile"
+                  src="imgs/nomal_profile.jpg"
+                  alt="기본프로필 이미지"
+                  class="profile_picture"
+                />
+              </div>
+            </div>
+            <div class="inner_middle">
+              <form id="user_form" action="email_confirm.html" method="post">
+                <div>
+                  <input
+                    type="text"
+                    id="edit_user_name"
+                    placeholder="사용자명"
+                    onfocus="this.placeholder=placeholder=''"
+                    onblur="this.placeholder='사용자명'"
+                    size="30"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="edit_email"
+                    placeholder="이메일 주소"
+                    onfocus="this.placeholder=placeholder=''"
+                    onblur="this.placeholder='ID 혹은 이메일'"
+                    size="30"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="introduction"
+                    placeholder="상태 메세지"
+                    onfocus="this.placeholder=placeholder=''"
+                    onblur="this.placeholder='상태 메세지'"
+                    size="30"
+                  />
+                </div>
+              </form>
+            </div>
+
+            <input
+              id="signup_btn"
+              class="signup_btn"
+              type="submit"
+              value="가입하기"
+            />
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="profile_edit.html"></script>
+  </body>
+</html>
