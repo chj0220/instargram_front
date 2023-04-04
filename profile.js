@@ -1,7 +1,6 @@
 const token = localStorage.getItem("accessToken");
 const local_userid = localStorage.getItem("userId");
 const granttype = localStorage.getItem("grantType");
-const member_id = localStorage.getItem("accessToken");
 const user_nick_name = document.querySelector(".user_nick_name");
 const user_name = document.querySelector(".user_name");
 
