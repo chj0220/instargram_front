@@ -39,9 +39,9 @@ body {
   color: black;
 }
 
-.signup_btn,
 .login_btn,
-.next_btn {
+.next_btn,
+.signup_btn {
   width: 260px;
   height: 40px;
   text-align: center;
@@ -52,6 +52,24 @@ body {
   padding-right: 20px;
   font-size: 18px;
   color: aliceblue;
+}
+
+.loader {
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: an1 1s ease infinite;
+}
+@keyframes an1 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }  
 }
 
 .signup_btn:hover,

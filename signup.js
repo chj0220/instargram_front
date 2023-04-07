@@ -34,9 +34,16 @@ function SignupHandleBtn() {
       console.log(response);
       location.href="email_confirm.html";
     },
-  });
-  
 
+  }); 
+  signup_btn=document.querySelector(".signup_btn");
+
+  signup_btn.onclick=function() {
+    this.innerHTML="<div class='loader'></div>"
+    setTimeout(() => {
+      location.href="email_confirm.html";
+    }, 2000);
+  }
 }
 
 signupbtn.addEventListener("click", SignupHandleBtn);
