@@ -51,13 +51,24 @@
             <div class="inner_top">
               <div class="image_size">
                 <img
-                  class="img_profile"
                   src="imgs/nomal_profile.jpg"
                   alt="기본프로필 이미지"
                   class="profile_picture"
                 />
               </div>
             </div>
+            <form id="imgprofileForm">
+              <input
+                type="file"
+                id="real_upload"
+                accept="image/*"
+                required
+                multiple
+              />
+              <button id="upload" type="button">
+                업로드
+              </button>
+            </form>
             <div class="inner_middle">
               <form id="user_form" action="email_confirm.html" method="post">
                 <div>
@@ -109,6 +120,6 @@
       integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
       crossorigin="anonymous"
     ></script>
-    <script src="profile_edit.html"></script>
+    <script src="profile_edit.js"></script>
   </body>
 </html>

@@ -18,7 +18,6 @@ function LoginHandleBtn() {
   };
   console.log(user_info);
   console.log(JSON.stringify(user_info));
-  loginToken_setstorage('userIdOrEmail',user_name.value);
 
   $.ajax({
     method: "POST",
@@ -34,13 +33,11 @@ function LoginHandleBtn() {
       loginToken_setstorage('refreshToken',data.refreshToken);
       loginToken_setstorage('refreshTokenExpiresIn',data.refreshTokenExpiresIn);
       loginToken_setstorage('userId',data.id);
-    },
-    complete:function(){
       location.replace('profile.html');
     },
     error:function(request, status, error) {
       alert("아이디와 비밀번호를 다시 확인해주세요.");
-     }
+     },
   });
 }
 

@@ -1,9 +1,9 @@
 const token = localStorage.getItem("accessToken");
 const local_userid = localStorage.getItem("userId");
 const granttype = localStorage.getItem("grantType");
-const member_id = localStorage.getItem("accessToken");
 const user_nick_name = document.querySelector(".user_nick_name");
 const user_name = document.querySelector(".user_name");
+
 
 $(function(){
 
@@ -21,6 +21,7 @@ $(function(){
       console.log(data);
       user_nick_name.innerHTML = data.name;
       user_name.innerHTML = data.userId;
+      $(`.profile_img > img`).attr({ src: data.profileImage });
     },
     error:function(request,status,error){   //데이터 주고받기가 실패했을 경우 실행할 결과
       alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
