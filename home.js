@@ -185,7 +185,7 @@ function toggleLike(postId){
     $.ajax({
         method: "POST",
         url: "http://52.78.86.193:8080/post/"+postId+"/like",
-        dataType: "json",
+        dataType: "text",
         data: JSON.stringify(local_userid),
         beforeSend: function(xhr) {
           xhr.setRequestHeader("Content-type","application/json");
