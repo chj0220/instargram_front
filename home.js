@@ -94,7 +94,7 @@ function post(data){
 
                 <div class="comment_container">
                     <div class="comment-detail c_text">
-                        <div>댓글 ${data.commentCount}개 모두 보기</div>
+                        <div id="comment-count-${data.postId}">댓글 ${data.commentCount}개 모두 보기</div>
                     </div>
                 </div>
 
@@ -249,6 +249,8 @@ function writeComment(postId){
         },
         success: function(data) {
             commentString.value="";
+            var count = document.getElementById('comment-count-'+postId);
+            count.innerText="댓글 "+(parseInt(count.textContent.replace(/[^0-9]/g,''))+1)+"개 모두 보기";
         },
         error:function(request,status,error){   //데이터 주고받기가 실패했을 경우 실행할 결과
           alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
