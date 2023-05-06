@@ -254,8 +254,11 @@ body{
     cursor: pointer;
 }
 
-.sprite_heart_icon_outline.on {
+.sprite_heart_icon_outline_on {
+    display: inline-block;
     background: url('../imgs/background01.png') no-repeat -26px -261px;
+    width: 24px;
+    height: 22px;
 }
 
 
