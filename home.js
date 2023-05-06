@@ -9,7 +9,6 @@ $(function(){
       method: "GET",
       url: "http://52.78.86.193:8080/post/home",
       dataType: "json",
-      data: JSON.stringify(local_userid),
       beforeSend: function(xhr) {
         xhr.setRequestHeader("Content-type","application/json");
         xhr.setRequestHeader("Authorization", granttype + token);
@@ -101,9 +100,9 @@ function post(data){
 
                 <div class="timer">${elpasedTime(data.createdAt)}</div>
 
-                <div class="comment_field" id="add-comment-post37">
+                <div class="comment_field" id="add-comment-${data.postId}">
                     <input type="text" placeholder="댓글달기..." />
-                    <div class="upload_btn m_text" data-name="comment">게시</div>
+                    <div class="upload_btn m_text" data-name="comment" onclick="writeComment(${data.postId})">게시</div>
                 </div>
                 </article>
             </div>`;
@@ -173,15 +172,6 @@ function toggleLike(postId){
     var like = document.getElementById('like'+postId);
     var count = document.getElementById('like-count-'+postId);
 
-    if(fLike.style.display=="none"){
-        like.style.display="none";
-        fLike.style.display="block";
-        count.innerText=parseInt(count.textContent)-1;
-    }else{
-        like.style.display="block";
-        fLike.style.display="none";
-        count.innerText=parseInt(count.textContent)+1;
-    }
     $.ajax({
         method: "POST",
         url: "http://52.78.86.193:8080/post/"+postId+"/like",
@@ -192,6 +182,15 @@ function toggleLike(postId){
           xhr.setRequestHeader("Authorization", granttype + token);
         },
         success: function(data) {
+            if(fLike.style.display=="none"){
+                like.style.display="none";
+                fLike.style.display="block";
+                count.innerText=parseInt(count.textContent)-1;
+            }else{
+                like.style.display="block";
+                fLike.style.display="none";
+                count.innerText=parseInt(count.textContent)+1;
+            }
         },
         error:function(request,status,error){   //데이터 주고받기가 실패했을 경우 실행할 결과
           alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
@@ -230,4 +229,29 @@ function fillHeart(postId, boolean){
         onclick="toggleLike(${postId})"
         ></div>`;
     }
+}
+
+function writeComment(postId){
+    var commentString = document.querySelector('#add-comment-'+postId+" input");
+    console.log(commentString);
+    const comment = {
+        comment: commentString.value
+    };
+
+    $.ajax({
+        method: "POST",
+        url: "http://52.78.86.193:8080/comment/"+postId,
+        dataType: "json",
+        data: JSON.stringify(comment),
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader("Content-type","application/json");
+          xhr.setRequestHeader("Authorization", granttype + token);
+        },
+        success: function(data) {
+
+        },
+        error:function(request,status,error){   //데이터 주고받기가 실패했을 경우 실행할 결과
+          alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+        }
+      });
 }
