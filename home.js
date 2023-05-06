@@ -248,7 +248,7 @@ function writeComment(postId){
           xhr.setRequestHeader("Authorization", granttype + token);
         },
         success: function(data) {
-
+            commentString.value="";
         },
         error:function(request,status,error){   //데이터 주고받기가 실패했을 경우 실행할 결과
           alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
