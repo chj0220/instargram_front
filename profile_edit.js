@@ -29,7 +29,6 @@ $(function(){
 function upload() {
   var formData = new FormData();
   var form = fileInput[0].files[0];
-
   formData.append('image', form);
 
   $.ajax({
@@ -46,6 +45,7 @@ function upload() {
     },
     success:function(data){
     	console.log("success : ", data);
+      console.log(data);
       $(`.image_size  > img`).attr({ src: data });
     },
     error:function(e){
